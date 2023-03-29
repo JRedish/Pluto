@@ -24,10 +24,3 @@ jobs:
 
       - name: Test
         run: dotnet test --no-restore --verbosity normal
-
-  deploy:
-    runs-on: windows-latest
-    needs: build
-    environment:
-      name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
