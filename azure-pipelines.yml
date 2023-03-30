@@ -20,13 +20,13 @@ stages:
       displayName: Login to ACR
       inputs:
         command: login
-        containerRegistry: Pay-As-You-Go(10c569b3-cd61-4255-9d30-93cade7e263f)
+        containerRegistry: ACR-Redish
     - task: Docker@2
       displayName: Build an image
       inputs:
         command: buildAndPush
         repository: docker-dotnet
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        containerRegistry: Pay-As-You-Go(10c569b3-cd61-4255-9d30-93cade7e263f)
+        containerRegistry: ACR-Redish
         tags: |
           $(tag)
