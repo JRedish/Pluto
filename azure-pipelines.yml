@@ -23,3 +23,11 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
+    - task: DockerCompose@0
+      inputs:
+        containerregistrytype: 'Azure Container Registry'
+        azureSubscription: 'Pay-As-You-Go(10c569b3-cd61-4255-9d30-93cade7e263f)'
+        azureContainerRegistry: '{"loginServer":"pluto00.azurecr.io", "id" : "/subscriptions/10c569b3-cd61-4255-9d30-93cade7e263f/resourceGroups/pluto-redish_group/providers/Microsoft.ContainerRegistry/registries/pluto00"}'
+        dockerComposeFile: '**/docker-compose.yml'
+        action: 'Push services'
+        includeLatestTag: true
