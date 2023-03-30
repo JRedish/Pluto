@@ -27,6 +27,6 @@ stages:
         command: buildAndPush
         repository: docker-dotnet
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        containerRegistry: 10c569b3-cd61-4255-9d30-93cade7e263f
+        containerRegistry: Pay-As-You-Go(10c569b3-cd61-4255-9d30-93cade7e263f)
         tags: |
           $(tag)
