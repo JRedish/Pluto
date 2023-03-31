@@ -11,6 +11,6 @@ public class HealthController : ControllerBase
     [HttpGet]
     public OkObjectResult IsAlive()
     {
-        return new OkObjectResult(new { Message = "I'm Alive!" });
+        return new OkObjectResult(new { Message = "I'm still alive!" });
     }
 }
