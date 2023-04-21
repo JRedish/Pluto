@@ -3,6 +3,7 @@ using Pluto.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IMineralService, MineralService>();
+builder.Services.AddScoped<IRockService, RockService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
