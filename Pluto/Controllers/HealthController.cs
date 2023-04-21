@@ -6,8 +6,6 @@ namespace Pluto.Controllers;
 [Route("[controller]")]
 public class HealthController : ControllerBase
 {
-    public HealthController() { }
-
     [HttpGet]
     public OkObjectResult IsAlive()
     {

@@ -1,6 +1,10 @@
+using Pluto.Models.DTOs;
+
 namespace Pluto.Services;
 
 public interface IMineralService
 {
-    string GetMineral(string name);
+    IEnumerable<MineralDto> GetMinerals();
+
+    MineralDto? GetMineral(string id);
 }
